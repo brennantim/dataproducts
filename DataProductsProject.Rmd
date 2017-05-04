@@ -18,7 +18,7 @@ This presentation is being created as part of the peer assessment for the course
 
 ## The Application
 
-To display the understanding of using shiny to build an application, a simple application called Cars MPG Predictor has been developed and deployed at: XXXXX
+To display the understanding of using shiny to build an application, a simple application called Cars MPG Predictor has been developed and deployed at: [https://brennantim.shinyapps.io/MPGPredictor/](https://brennantim.shinyapps.io/MPGPredictor/)
 
 The application allows the user to:
 
@@ -31,29 +31,10 @@ The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel
 
 The dataset is included in the R datasets package and was used serveral times during the Johns Hopkins Data Science Specializationg track on Coursera.
 
-Source code for the project is available on GitHub. XXX LINK XXX
+Source code for the project is available on [GitHub](https://github.com/brennantim/dataproducts/tree/master/MPGPredictor).
 
 ##  Data
 
 ```{r}
 head(mtcars)
 ```
-
-## Slide with Bullets
-
-- Bullet 1
-- Bullet 2
-- Bullet 3
-
-## Slide with R Output
-
-```{r cars, echo = TRUE}
-summary(cars)
-```
-
-## Slide with Plot
-
-```{r pressure}
-plot(pressure)
-```
-

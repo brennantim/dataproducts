@@ -1,6 +1,9 @@
 library(shiny)
 library(datasets)
 
+
+mtcars$am <- as.factor(mtcars$am)
+levels(mtcars$am) <- c("Automatic", "Manual")
 fit  <- lm(mpg~am + wt + hp + cyl, data = mtcars)
 
 MPG <- function(am, wt, hp, cyl) {
