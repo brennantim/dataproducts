@@ -22,7 +22,7 @@ To display the understanding of using shiny to build an application, a simple ap
 
 The application allows the user to:
 
-- Select variables such as cylinders, horsepower, weight and transmission type.
+- Select variables cylinders, horsepower, weight and transmission type.
 - Receive a prediciton as to the likely MPG a car will get based on input parameters.
 
 ## The Data
@@ -33,8 +33,15 @@ The dataset is included in the R datasets package and was used serveral times du
 
 Source code for the project is available on [GitHub](https://github.com/brennantim/dataproducts/tree/master/MPGPredictor).
 
-##  Data
+##  The Functionality
 
-```{r}
-head(mtcars)
+```{r, echo=TRUE, eval=FALSE}
+mtcars$am <- as.factor(mtcars$am)
+levels(mtcars$am) <- c("Automatic", "Manual")
+fit  <- lm(mpg~am + wt + hp + cyl, data = mtcars)
+
+MPG <- function(am, wt, hp, cyl) {
+        df.new <- data.frame(am=am, wt=wt, hp=hp, cyl=cyl)
+        return(predict(fit, df.new))
+}
 ```

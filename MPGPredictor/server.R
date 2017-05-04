@@ -8,7 +8,7 @@ fit  <- lm(mpg~am + wt + hp + cyl, data = mtcars)
 
 MPG <- function(am, wt, hp, cyl) {
         df.new <- data.frame(am=am, wt=wt, hp=hp, cyl=cyl)
-        return(predict(fit, df.new))
+        return(predict(fit, df.new)[[1]])
 }
 
 shinyServer(
